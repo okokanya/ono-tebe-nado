@@ -8,43 +8,53 @@ header {
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
   align-items: center;
-  padding: 0 50px;
-  border: 1px solid red;
-  /* background-color: lightblue; */
+  padding: 0 70px 0 30px;
 }
 
-.header__menu a {
+.header__links-list-item {
   position: relative;
   font-size: 18px;
   line-height: 20px;
-  border-bottom: 1px solid rebeccapurple;
+  border-bottom: 1px solid #000000;
 }
 
-.header__menu a:not(:last-child) {
-  margin-right: 15px;
+.header__links-list-item:not(:last-child) {
+  margin-right: 32px;
 }
 
-.header__menu a:not(:last-child)::after {
-position: absolute;
-right: -12px;
-left: auto;
-content: url('../images/list_marker.svg');
+.header__links-list-item:not(:last-child)::after {
+  position: absolute;
+  right: -20px;
+  top: 0px;
+  left: auto;
+  content: url("../images/list_marker.svg");
 }
 
-a:active {
+.header__link_active {
   border-bottom: none;
 }
 
-.logo {
+.header__logo-image {
   margin: 0 auto;
+  height: 105px;
+  width: 148px;
 }
 
-.contacts {
-  width: 240px;
+.header__address {
   display: flex;
   flex-direction: column;
   margin: 0 0 0 auto;
 }
+.address {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+.address a {
+  border-bottom: 1px solid #000000;
+  width: fit-content;
+}
+
 .cover {
   display: flex;
   flex-direction: column;
@@ -55,7 +65,7 @@ a:active {
   background-image: url("../images/cover.jpg");
   background-size: cover;
   position: relative;
-  color: white;
+  color: #ffffff;
 }
 .overlay {
   position: absolute;
@@ -68,7 +78,7 @@ a:active {
   z-index: 1;
   color: #ffffff;
   font-size: 100px;
-  line-height: 100px;
+  line-height: 115%;
   font-weight: 700;
   letter-spacing: 30px;
   text-transform: uppercase;
@@ -78,7 +88,7 @@ a:active {
 }
 
 .letter-spacing-extended {
-letter-spacing: 60px;
+  letter-spacing: 60px;
 }
 
 .aligned-text_center {
@@ -100,7 +110,7 @@ letter-spacing: 60px;
 
 .cover__description-text {
   padding: 0 78px 0 0;
-  color: #FFF;
+  color: #fff;
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
@@ -113,7 +123,7 @@ letter-spacing: 60px;
   padding: 12px 32px;
   background-color: transparent;
   border: 1px solid white;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Raleway;
   font-size: 22px;
@@ -124,21 +134,23 @@ letter-spacing: 60px;
 }
 
 .bet-button:hover {
-  animation: pulse 1s;
+  animation: pulse 0.5s;
   box-shadow: 0 0 0 1em transparent;
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 #ffffff; }
+  0% {
+    box-shadow: 0 0 0 0 #ffffff;
+  }
 }
-
-
 
 /* лоты */
 
 .lots {
   margin: 0 0 182px 0;
+  padding: 0 50px;
 }
+
 .lots__heading {
   font-size: 40px;
   font-style: normal;
@@ -170,7 +182,6 @@ letter-spacing: 60px;
   padding: 50px 40px;
   color: white;
   background-size: cover;
-
 }
 
 .card {
@@ -209,12 +220,14 @@ letter-spacing: 60px;
 }
 
 .lots__card-list-item:hover {
-  animation: pulseDark 1s;
+  animation: pulseDark 0.5s;
   box-shadow: 0 0 0 1em transparent;
 }
 
 @keyframes pulseDark {
-  0% { box-shadow: 0 0 0 0 #000000; }
+  0% {
+    box-shadow: 0 0 0 0 #000000;
+  }
 }
 
 .lots__look-more-link {
@@ -228,11 +241,11 @@ letter-spacing: 60px;
 /* about */
 
 .about {
-  border: 1px solid red;
   display: flex;
+  margin: 0 0 180px 0;
+  padding: 0 50px;
 }
 .about__column {
-  border: 1px solid violet;
   gap: 25px;
 }
 .about__column:nth-child(1) {
@@ -257,7 +270,6 @@ letter-spacing: 60px;
 .about__logo-image {
   width: 148px;
   height: 114px;
-  
 }
 .about__title {
   font-size: 40px;
@@ -274,4 +286,55 @@ letter-spacing: 60px;
   font-size: 20px;
   font-weight: 400;
   margin: 0 0 25px 0;
+}
+
+/* футер */
+.footer {
+  margin: 0 0 90px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  align-items: center;
+  padding: 0 50px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__menu-link {
+  border-bottom: 1px solid #000000;
+  width: fit-content;
+}
+
+.footer__menu-link_active {
+  border-bottom: 1px solid transparent;
+}
+
+.footer__social-list {
+  display: flex;
+}
+
+.footer__social-list-item:hover {
+  animation: pulseDark 1s;
+  box-shadow: 0 0 0 1em transparent;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer__social-list-item {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.footer__social-list-item:not(:last-child) {
+  margin: 0 48px 0 0;
 }
