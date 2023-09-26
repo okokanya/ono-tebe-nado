@@ -1,7 +1,8 @@
 body {
-  padding: 90px 0;
+  padding: 90px 0 0 0;
 }
 
+/* хедер */
 header {
   margin: 0 0 90px 0;
   width: 100%;
@@ -9,12 +10,12 @@ header {
   grid-template-columns: 3fr 1fr 3fr;
   align-items: center;
   padding: 0 70px 0 30px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .header__links-list-item {
   position: relative;
-  font-size: 18px;
-  line-height: 20px;
   border-bottom: 1px solid #000000;
 }
 
@@ -34,9 +35,15 @@ header {
   border-bottom: none;
 }
 
+.header__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header__logo-image {
   margin: 0 auto;
-  height: 105px;
+  height: 115px;
   width: 148px;
 }
 
@@ -45,6 +52,7 @@ header {
   flex-direction: column;
   margin: 0 0 0 auto;
 }
+
 .address {
   width: 240px;
   display: flex;
@@ -55,6 +63,8 @@ header {
   width: fit-content;
 }
 
+
+/* основная часть */
 .cover {
   display: flex;
   flex-direction: column;
@@ -74,21 +84,24 @@ header {
   z-index: 0;
 }
 .cover__title {
-  padding: 0 0 127px;
+  padding: 0 0 135px;
   z-index: 1;
   color: #ffffff;
   font-size: 100px;
-  line-height: 115%;
+  line-height: 117%;
   font-weight: 700;
   letter-spacing: 30px;
   text-transform: uppercase;
 }
-.aligned-text {
+.aligned-text:not(:last-child) {
   padding: 0 0 20px 0;
 }
 
 .letter-spacing-extended {
   letter-spacing: 60px;
+}
+.letter-spacing-zero {
+  letter-spacing: 0px;
 }
 
 .aligned-text_center {
@@ -282,7 +295,7 @@ header {
   font-weight: 400;
 }
 
-.about__text p {
+.about__text p:not(:last-child) {
   font-size: 20px;
   font-weight: 400;
   margin: 0 0 25px 0;
@@ -294,7 +307,8 @@ header {
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
-  align-items: center;
+  /* align-items: center; */
+  align-items: flex-start;
   padding: 0 50px;
   font-size: 18px;
   font-style: normal;
