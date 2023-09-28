@@ -63,7 +63,6 @@ header {
   width: fit-content;
 }
 
-
 /* основная часть */
 .cover {
   display: flex;
@@ -153,7 +152,7 @@ header {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 #ffffff;
+      box-shadow: 0 0 0 0 #ffffff;
   }
 }
 
@@ -239,7 +238,7 @@ header {
 
 @keyframes pulseDark {
   0% {
-    box-shadow: 0 0 0 0 #000000;
+      box-shadow: 0 0 0 0 #000000;
   }
 }
 
