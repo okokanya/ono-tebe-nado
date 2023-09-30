@@ -39,6 +39,7 @@ blockquote {
 
 a,
 button {
+    color: inherit;
     cursor: pointer;
     text-decoration: none;
     font-family: inherit;

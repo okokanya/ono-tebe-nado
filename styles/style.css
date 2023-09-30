@@ -143,7 +143,7 @@ header {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 #ffffff;
+      box-shadow: 0 0 0 0 #ffffff;
   }
 }
 
@@ -191,11 +191,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 50px 40px;
+  min-height: 450px;
   background-size: cover;
   background-position: center;
-  padding: 50px 40px;
-  z-index: 1;
-  /* height: inherit; */
 }
 
 .card_type_film {
@@ -209,7 +208,6 @@ header {
 }
 
 .card__title {
-  /* font-family: inherit; */
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -234,7 +232,7 @@ header {
 
 @keyframes pulseDark {
   0% {
-    box-shadow: 0 0 0 0 #000000;
+      box-shadow: 0 0 0 0 #000000;
   }
 }
 
@@ -301,7 +299,6 @@ header {
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
-  /* align-items: center; */
   align-items: flex-start;
   padding: 0 50px;
   font-size: 18px;
