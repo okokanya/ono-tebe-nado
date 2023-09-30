@@ -49,7 +49,7 @@ header {
 }
 
 .address {
-  width: 240px;
+  width: 280px;
   display: flex;
   flex-direction: column;
 }
@@ -77,13 +77,14 @@ header {
   z-index: 1;
 }
 .cover__title {
-  padding: 0 0 135px;
+  padding: 0 0 120px;
   color: #ffffff;
   font-size: 100px;
   line-height: 125px;
   font-weight: 700;
   letter-spacing: 30px;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .letter-spacing-extended {
@@ -108,10 +109,11 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 1;
 }
 
 .cover__description-text {
-  padding: 0 78px 0 0;
+  padding: 0 40px 0 0;
   color: #fff;
   font-size: 22px;
   font-weight: 400;
@@ -181,6 +183,7 @@ header {
   flex: 1 1 auto;
   flex-grow: 1;
   flex-basis: 430px;
+  min-height: 450px;
   position: relative;
   color: white;
 }
@@ -253,12 +256,13 @@ header {
   margin: 0 0 180px 0;
   padding: 0 50px;
 }
-.about__column {
+/* .about__column {
   gap: 25px;
-}
+} */
 .about__column:nth-child(1) {
   flex: 0 0 auto;
-  width: calc(100% / 3 - 25px);
+  width: 430px;
+  margin: 0 25px 0 0;
 }
 
 .about__column:nth-child(2) {
